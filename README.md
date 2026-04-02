@@ -149,6 +149,28 @@ At this stage, the project is focused on:
 
 ---
 
+## Backend Quickstart
+
+### Local (virtualenv)
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install .[dev]
+cp .env.example .env
+uvicorn nexusflow.main:app --reload
+```
+
+### Docker
+```bash
+cp .env.example .env
+docker compose up --build
+```
+
+Health check: `GET /health`
+
+---
+
 ## Future Plans
 
 - Real-time messaging
