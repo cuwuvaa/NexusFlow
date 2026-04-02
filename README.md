@@ -156,7 +156,7 @@ At this stage, the project is focused on:
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
-pip install .[dev]
+pip install -e ".[dev]"
 cp .env.example .env
 uvicorn nexusflow.main:app --reload
 ```
